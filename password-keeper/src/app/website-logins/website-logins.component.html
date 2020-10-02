@@ -1,0 +1,24 @@
+<div class = "container">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group w-25">
+    <label for="exampleInputEmail1">Site name</label>
+    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="website">
+    
+  </div>
+
+  <div class="form-group w-25">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="username">
+    
+  </div>
+  <div class="form-group w-25">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h3> {{successMessage}} </h3>
+
+</div>

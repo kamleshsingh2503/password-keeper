@@ -1,0 +1,22 @@
+<div class = "container">
+
+<div >
+<table style = "border : 1px solid #ddd; border-collapse: collapse;">
+   <tr> 
+        <th style = "border : 1px solid black;"> Website</th>
+         <th style = "border : 1px solid black;"> Username</th>
+          <th style = "border : 1px solid black;"> Password</th>
+    </tr>
+  <tr *ngFor = "let login of loginData">
+    
+    <td style = "border : 1px solid black;">{{ login.website }}</td>
+    <td style = "border : 1px solid black;">{{ login.username }}</td>
+    <td style = "border : 1px solid black;">{{ login.password }}</td>
+  </tr> 
+</table>
+</div>
+
+<h3>{{successMessage}} </h3>
+
+
+</div>
