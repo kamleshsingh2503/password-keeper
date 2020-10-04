@@ -16,7 +16,9 @@
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button style="margin:5px;" type="submit" class="btn btn-primary">Submit</button>
+
+   <button style="margin:5px;" (click) = "showLogins()" class="btn btn-primary">Show login</button>
 </form>
 
 <h3> {{successMessage}} </h3>

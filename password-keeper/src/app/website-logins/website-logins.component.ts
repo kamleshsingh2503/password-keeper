@@ -36,8 +36,14 @@ export class WebsiteLoginsComponent implements OnInit {
                 console.log(getData);
                 if(getData['status'] == 'success'){
                     this.successMessage = "new login created";
+                    debugger;
+                    this.profileForm.reset();
                 }
             })
+  }
+
+  showLogins(){
+    this.router.navigate(['app/sites/list']);
   }
 
 
