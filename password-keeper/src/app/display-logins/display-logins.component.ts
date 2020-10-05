@@ -31,6 +31,10 @@ export class DisplayLoginsComponent implements OnInit {
                     this.loginData = websiteData['message'];
                     console.log(this.loginData);
                 }
+                if(websiteData['status'] == ''){
+                    this.successMessage = "Server issue";
+                    return;
+                }
 
             }
         )

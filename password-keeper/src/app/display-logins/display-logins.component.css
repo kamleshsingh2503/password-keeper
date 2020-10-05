@@ -1,0 +1,15 @@
+
+
+  .contentInside {
+    border-radius: 10px;
+    width: 200px;
+    height:100px;
+    margin: 7px;
+    border: 1px solid black;
+    display: inline-flex;
+  }
+
+  li:first-child { 
+    border-bottom: 1px solid black;
+    width: 150px;
+  }

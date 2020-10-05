@@ -21,7 +21,7 @@ export class WebsiteLoginsComponent implements OnInit {
     this.userId = parseInt(sessionStorage.getItem('userId'));
   }
 
-  profileForm = new FormGroup({
+  websiteForm = new FormGroup({
     website: new FormControl(''),
     username: new FormControl(''),
     password: new FormControl(''),
@@ -31,13 +31,13 @@ export class WebsiteLoginsComponent implements OnInit {
 
   onSubmit(){
       console.log(this.userId)
-    this.userService.getLogins(this.userId, this.profileForm.value).subscribe(
+    this.userService.getLogins(this.userId, this.websiteForm.value).subscribe(
             getData => {
                 console.log(getData);
                 if(getData['status'] == 'success'){
                     this.successMessage = "new login created";
                     debugger;
-                    this.profileForm.reset();
+                    this.websiteForm.reset();
                 }
             })
   }

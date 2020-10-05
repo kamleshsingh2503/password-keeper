@@ -30,12 +30,10 @@ export class LoginComponent implements OnInit {
         console.log(authData);
 
         if(authData['status'] == 'success'){
+            
+              debugger;
               sessionStorage.setItem('userId', authData['userId']);
-              this.successMessage = "Logged in successfully";
-              setInterval(()=>{
-                this.router.navigate(['app/sites']);
-            }, 2000);
-              
+              this.successMessage = "You have logged in successfully, proceed to Add login";
         }
         if(authData['status'] == 'failed'){
             this.successMessage = authData['message'];

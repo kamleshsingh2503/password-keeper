@@ -40,6 +40,10 @@ export class CreateUserComponent implements OnInit {
             this.successMessage = userData['message'];
             return;
         }
+        if(userData['status'] == ""){
+            this.successMessage = "Server problem";
+            return;
+        }
     })
   }
 

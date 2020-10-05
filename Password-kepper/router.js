@@ -34,6 +34,7 @@ router.post("/user", (req, res) => {
             {
                 if(err) { 
                     console.log("error: ", err); 
+                    res.json( {status : "failed", message : "Server issue"});
                 }
                 else{
                     res.json({status : 'account created'});
